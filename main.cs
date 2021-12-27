@@ -5,7 +5,7 @@ public class Program
 {
     public static void Main()
     {
-        Random random = new Random();
+        Random random = new Random(); // random можно использовать вместо ввода с клавиатуры 
         int firstValue = 0,
             resultValue = 0, 
             userResultValue = 0;     // предлагаем выбрать число на которое будет показана таблица умножения от 1 до 10
