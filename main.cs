@@ -15,25 +15,28 @@ public class Program
         firstValue = int.Parse(Console.ReadLine());
         Console.WriteLine("Дальше необходимо ввести ответы на предложенные примеры:");
         bool[] arrayAnswers = new bool[11];
-        for (int i = 0; i <= 10; i++)
+        for (int i = 1; i < 11; i++)
         { 
             Console.Write ($@"{i}. {firstValue} * {i} = ");
             userResultValue = Convert.ToInt32(Console.ReadLine());
             resultValue = firstValue * i;
             if (resultValue == userResultValue)
             {
-                arrayAnswers[i] = true;
+                arrayAnswers[i-1] = true;
                 //Console.WriteLine(" - ВЕРНО!");                
             }
             else
             {
-                arrayAnswers[i] = false;
+                arrayAnswers[i-1] = false;
                 //Console.WriteLine(" - НЕ верно!");
             }
+
+            //Console.Write ()
         }    
-        for (int i = 0; i < 10; i++)
+        for (int i = 1; i <= 11; i++)
         {
-            Console.WriteLine($@"{i}. {arrayAnswers[i]}");
+            if (i == 11) break;
+            Console.WriteLine($@"{i}. {arrayAnswers[i-1]}");
         }
         Console.ReadLine();        
     }
